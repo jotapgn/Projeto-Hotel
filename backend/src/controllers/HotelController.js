@@ -1,4 +1,5 @@
 import Hotel from '../models/Hotel';
+import Usuario from '../models/Usuario';
 
 class HotelController {
 
@@ -19,7 +20,7 @@ class HotelController {
 
 
     }
-    async index(req, res){
+    async index(req, res) {
         let hoteis = await Hotel.find();
         return res.json(hoteis)
     }

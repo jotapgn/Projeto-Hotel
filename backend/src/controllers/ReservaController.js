@@ -1,23 +1,25 @@
 import Reserva from '../models/Reserva';
+import Hotel from '../models/Hotel';
+import Usuario from '../models/Usuario';
 
 class ReservaController{
 
-    index(req, res){
-        //let reservas = await Reserva.find();
-        return res.json({retorno: false});
+    async index(req, res){
+        let reservas = await Reserva.find({ responsavel });
+        return res.json(reservas)
     }
 
     async store(req, res) {
-        const { responsavel, hotel, período, dataInicial, dataFinal, qtdeHospedes } = req.body;
-
+        const { usuario_id, dataInicial, dataFinal, qtdeHospedes } = req.body;
+        const { hotel_id } = req.params;
         let reserva = await Reserva.create({
-            responsavel,
-            hotel,
-            período,
+            responsavel: usuario_id,
+            hotel: hotel_id,
             dataInicial,
             dataFinal,
             qtdeHospedes,
         });
+        await reserva.populate('responsavel').populate('hotel').execPopulate();
 
         return res.json(reserva);
 
