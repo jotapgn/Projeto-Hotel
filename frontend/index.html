@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="./js/main.js"></script>
+    <title>Hotel 2.0</title>
+</head>
+
+<body>
+    <div class="container">
+        <form>
+            <div class="titulo"><span>Hotel Una</span></div>
+            <div class="hotel">
+                <select id="hoteis">
+                    <option value="selecione">Selecione o Hotel: </option>
+                    <option value='hotelBetim'>Hotel Betim</option>
+                    <option value='hotelBH'>Hotel Belo Horizonte</option>
+                    <option value='hotelContagem'>Hotel Contagem</option>
+                    <option value='hotelIgarape'>Hotel Igarapé</option>
+                </select>
+            </div>
+            <div class="datas">
+                <div class="inicial">
+                    <label for="datain">Data Inicial</label>
+                    <input type="text" id="dataInicio">
+                </div>
+                <div class="final">
+                    <label for="datafin">Data Final</label>
+                    <input type="text" id="dataFinal">
+                </div>
+            </div>
+            <div class="hospedes">
+                <div class="adultos">
+                    <label for="adultos-label">Adultos</label>
+                    <select id="adultos-select">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                </div>
+                <div class="criancas">
+                    <label for="cirancas-label">Crianças</label>
+                    <select id="criancas-select">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                </div>
+            </div>
+            <div class="dados">
+                <input type="text" id="nome" required placeholder="Digite o seu nome: ">
+                <input type="email" id="e-mail" required placeholder="Digite o seu email: ">
+                <input type="tel" id="numero" required placeholder="Digite o seu número:">
+            </div>
+            <div class="btn">
+                <button>Enviar</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>

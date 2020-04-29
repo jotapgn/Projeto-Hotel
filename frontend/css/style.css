@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+*{
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+body{
+    background-image: linear-gradient(to right, #0ba360, #3cba92);
+    padding: 20px 40px 30px;
+    width: 100%;
+    height: auto;
+}
+
+.container{
+    background-color: #fff;
+    border-radius: 5px;
+    max-width: 500px;
+    margin: 100px auto;
+    height: auto;
+    background-size: cover;
+    padding: 25px;
+}
+/* Título*/
+.titulo{
+    text-align: center;
+    font-size: 50px;
+    color: #000;
+    position: relative;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+.titulo:before{
+    content: "";
+    background-image: linear-gradient(to right, #0ba360, #3cba92);
+    height: 2px;
+    width: 100px;
+    display: block;
+    top: 50%;
+    left: 0px;
+    position: absolute;
+}
+.titulo:after{
+    content: "";
+    background-image: linear-gradient(to right, #0ba360, #3cba92);
+    height: 2px;
+    width: 100px;
+    display: block;
+    top: 50%;
+    right: 0;
+    position: absolute;
+}
+/* Selecionar o Hotel*/
+.hotel{
+    padding: 25px;
+}
+select {
+    font-size: 20px;
+    width: 100%;
+    padding: 5px 5px;
+    border-radius: 5px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+/*datas*/
+.inicial label{
+    display: block;
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+.final label{
+    display: block;
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
+.inicial, .final{
+    display: inline-block;
+    padding: 10px
+}
+.inicial{
+    margin-left: 2%;
+}
+.datas input{
+    padding: 6px 6px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    height: 35px;
+    font-size: 15px;
+    width: 90%;
+}
+/* Hospedes */
+.adultos, .criancas{
+    display: inline-block;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+.adultos label{
+    display: block;
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+.criancas label{
+    display: block;
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+.hospedes input{
+    height: 30px;
+    padding: 5px 5px;
+    border-radius: 4px;
+}
+.adultos{
+    margin-right: 5%;
+    margin-left: 2%;
+}
+.adultos select{
+    font-size: 20px;
+    width: 170px;
+    padding: 5px 5px;
+    border-radius: 5px;
+    text-align: center;
+    position: relative;
+    border: 1px solid #ccc;
+}
+.criancas select{
+    font-size: 20px;
+    width: 173px;
+    padding: 5px 5px;
+    border-radius: 5px;
+    text-align: center;
+    position: relative;
+    border: 1px solid #ccc;
+}
+/* Dados do Responsavel*/
+.dados input{
+    display: block;
+    margin-bottom: 20px;
+    padding: 10px 10px;
+    border-radius: 5px;
+    width: 94%;
+    height: 45px;
+    font-size: 20px;
+    border: 1px solid #ccc;
+    margin-left: 3%;
+}
+.dados{
+    padding: 5px 5px;;
+}
+
+.btn{
+    padding: 5px 5px;;
+}
+
+.btn button{
+    width: 94%;
+    padding: 10px 10px;
+    border-radius: 5px;
+    margin-left: 3%;
+    font-size: 25px;
+    background: #cd2e8a;
+    color: #fff;
+    font-weight: 500;
+    box-shadow: 0 5px; 
+    cursor: pointer;
+    outline: none;
+}
+/* Button */
+.btn button:hover{
+    background: #CF1681;
+}
+
+.btn button:active{
+    background-color: #CF1681;
+    box-shadow: 0 5px;
+    transform: translateY(4px);
+  
+  }
+
+.dados ::placeholder{
+    color: #000;
+}
