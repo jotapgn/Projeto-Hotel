@@ -17,7 +17,7 @@ routes.post('/hoteis', HotelController.store);
 routes.get('/hoteis', HotelController.index);
 
 
-routes.post('/reservas', ReservaController.store);
-routes.get('/reservas', ReservaController.index);
+routes.post('/hoteis/:hotel_id/reserva', ReservaController.store);
+routes.get('/hoteis/:hotel_id/reserva', ReservaController.index);
 
 export default routes; //module.exports = routes;
