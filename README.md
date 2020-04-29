@@ -1,3 +1,3 @@
 Projeto Hotel - 
 FrontEnd: HTML, CSS e Javascript;
-Backend: Node.js e MongoDB
+Backend: Node.js e MongoDB;
