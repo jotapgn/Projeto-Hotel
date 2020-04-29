@@ -1,7 +1,7 @@
 $(document).ready(function () {
     $("#dataInicio").datepicker({
         dateFormat: "yy-mm-dd",
-        minDate: new Date('2020-4-29')
+        minDate: new Date()
     });
 })
 $(document).ready(function () {
