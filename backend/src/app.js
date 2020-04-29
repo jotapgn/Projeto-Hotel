@@ -4,6 +4,8 @@ import mongoose from 'mongoose';
 
 import routes from './routes'; //const routes = require('./routes');
 
+import cors from   'cors';
+
 class App {
 
     constructor() {
@@ -21,6 +23,7 @@ class App {
 
     middlewares() {
         this.app.use(express.json());
+        this.app.use(cors());
     }
 
     routes() {
