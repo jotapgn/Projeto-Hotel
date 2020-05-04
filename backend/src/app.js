@@ -11,12 +11,11 @@ class App {
     constructor() {
         this.app = express();
 
-        mongoose.connect('mongodb+srv://web202001:web202001@web202001-7q5k2.mongodb.net/test?retryWrites=true&w=majority',
-            {
-                useNewUrlParser: true,
-                useUnifiedTopology: true,
-            });
-
+        mongoose.set('useNewUrlParser', true);
+        mongoose.set('useUnifiedTopology', true);
+        mongoose.set('useCreateIndex', true);
+        mongoose.set('useFindAndModify', false);
+        mongoose.connect('mongodb+srv://web202001:web202001@web202001-7q5k2.mongodb.net/test?retryWrites=true&w=majority');
         this.middlewares();
         this.routes();
     }
