@@ -7,6 +7,7 @@ const HotelSchema = new Schema({
     endereco: String,
     qtdeAptos: Number,
     valorDiaria: Number,
+    nomeImagem: String,
 });
 
 export default model('Hotel', HotelSchema);
