@@ -5,17 +5,27 @@ class HotelController {
 
 
     async store(req, res) {
+
+        const nomeImagem = req.file.filename;
+
+        const { usuario_id } = req.headers;
+
         const { nome, uf, municipio, endereco, qtdeAptos, valorDiaria } = req.body;
 
-        let hotel = await Hotel.create({
-            nome,
-            uf,
-            municipio,
-            endereco,
-            qtdeAptos,
-            valorDiaria,
-        });
+        let hotel = await Hotel.findeOne({ nome });
 
+        if (!hotel) {
+            hotel = await Hotel.create({
+                nome,
+                uf,
+                municipio,
+                endereco,
+                qtdeAptos,
+                valorDiaria,
+                nomeImagem
+            });
+
+        }
         return res.json(hotel);
 
 
@@ -23,8 +33,8 @@ class HotelController {
     async index(req, res) {
         let hoteis = await Hotel.find();
         return res.json(hoteis)
-    }
+    };
 
-}
+};
 
 export default new HotelController;
