@@ -6,6 +6,8 @@ import routes from './routes'; //const routes = require('./routes');
 
 import cors from   'cors';
 
+import path from 'path';
+
 class App {
 
     constructor() {
@@ -21,6 +23,12 @@ class App {
     }
 
     middlewares() {
+
+        this.app.use(
+            '/imagens',
+            express.static(path.resolve(__dirname, '..', '..', 'uploads'))
+        )
+
         this.app.use(express.json());
         this.app.use(cors());
     }
