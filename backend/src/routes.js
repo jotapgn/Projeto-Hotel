@@ -19,8 +19,8 @@ routes.post('/sessions', SessionController.store);
 routes.get('/sessions', SessionController.index);
 //routes.put('/sessions', SessionController.update);
 
-routes.post('/hoteis', HotelController.store);
-routes.get('/hoteis', upload.single('imagem'), HotelController.index);
+routes.post('/hoteis', upload.single('imagem'), HotelController.store);
+routes.get('/hoteis', HotelController.index);
 
 
 routes.post('/hoteis/:hotel_id/reserva', ReservaController.store);
